@@ -18,7 +18,7 @@ public class Game {
 
         this.hello(lifeNumber);
 
-        while (player.getLifeNumber() != 0) {
+         do {
             if (!String.valueOf(WORD.getGuessedLetters()).contains("_"))
                 break;
 
@@ -30,7 +30,7 @@ public class Game {
             if (this.checkLetter()) {
                 WORD.addLetterToGuessedLetters(inputLetter.toCharArray()[0]);
             }
-        }
+        } while (player.getLifeNumber() != 0);
 
         if (player.getLifeNumber() == 0) {
             System.out.printf("\n%s, GAME OVER!", player.getName());
