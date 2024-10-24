@@ -6,17 +6,16 @@ import java.util.Scanner;
 
 public class Game {
     private final Scanner in = new Scanner(System.in);
-
     private final Word WORD = new Word();
+
     private Player player;
     private String inputLetter;
     private List<String> inputtedLetters;
 
-    public void gameStart(int lifeNumber) {
+    public void gameStart(Player newPlayer) {
         inputLetter = "";
         inputtedLetters = new ArrayList<>();
-
-        this.hello(lifeNumber);
+        player = newPlayer;
 
          do {
             if (!String.valueOf(WORD.getGuessedLetters()).contains("_"))
@@ -33,29 +32,19 @@ public class Game {
         } while (player.getLifeNumber() != 0);
 
         if (player.getLifeNumber() == 0) {
-            System.out.printf("\n%s, GAME OVER!", player.getName());
-            System.exit(0);
+            System.out.printf("\n%s, GAME OVER!\n", player.getName());
+            return;
         }
 
         System.out.println("\nGUEST WORD: ".concat(String.valueOf(WORD.getGuessedLetters())));
-        System.out.printf("\n!!!Congratulations!!!\n%s, you are a winner and saved your life!", player.getName());
+        System.out.printf("\n!!!Congratulations!!!\n%s, you are a winner and saved your life!\n", player.getName());
     }
 
-    private void hello(int lifeNumber) {
-        System.out.print("Hello!\n"
-                .concat("You are in 'The Gallows Game'.\n")
-                .concat("How are your name?\n")
-                .concat("My Name: "));
-        player = new Player(in.next(), lifeNumber);
-        in.nextLine();
 
-        System.out.printf("\nNice to meet you, %s!\n", player.getName());
-    }
 
     private void inputLetter() {
         System.out.printf("\nYou have %d life. \nInput letter: ", player.getLifeNumber());
         inputLetter = in.nextLine().toUpperCase();
-
     }
 
     private boolean checkLetter() {

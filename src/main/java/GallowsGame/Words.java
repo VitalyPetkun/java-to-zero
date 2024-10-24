@@ -12,7 +12,9 @@ public enum Words {
     JAVA("JAVA"),
     RESOURCES("RESOURCES"),
     RESPONSE("RESPONSE"),
-    COOKIES("COOKIES");
+    COOKIES("COOKIES"),
+    OBJECT("OBJECT"),
+    ORIGIN("ORIGIN");
 
     private String word;
 
