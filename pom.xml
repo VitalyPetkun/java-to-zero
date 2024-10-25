@@ -14,6 +14,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <dependency.lombok.version>1.18.34</dependency.lombok.version>
+        <dependency.owner.version>1.0.12</dependency.owner.version>
+
     </properties>
 
     <dependencies>
@@ -22,6 +24,12 @@
             <artifactId>lombok</artifactId>
             <version>${dependency.lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>${dependency.owner.version}</version>
         </dependency>
     </dependencies>
 
