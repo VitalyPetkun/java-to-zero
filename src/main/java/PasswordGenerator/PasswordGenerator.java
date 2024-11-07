@@ -19,6 +19,7 @@ public class PasswordGenerator {
     }
 
     public static String getPassword(int length) {
+        password = "";
         int partSize = length / PART_COUNT;
         int lastPartSize = length % PART_COUNT;
 
