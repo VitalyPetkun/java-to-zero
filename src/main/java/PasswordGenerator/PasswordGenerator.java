@@ -3,14 +3,14 @@ package PasswordGenerator;
 import java.util.Random;
 
 public class PasswordGenerator {
-    private static final int FIRST_PART_BOTTOM_VALUE = 65;
-    private static final int FIRST_PART_TOP_VALUE = 90;
-    private static final int SECOND_PART_BOTTOM_VALUE = 97;
-    private static final int SECOND_PART_TOP_VALUE = 122;
-    private static final int THIRD_PART_BOTTOM_VALUE = 33;
-    private static final int THIRD_PART_TOP_VALUE = 47;
-    private static final int FOURTH_PART_BOTTOM_VALUE = 48;
-    private static final int FOURTH_PART_TOP_VALUE = 64;
+    private static final int FIRST_PART_BOTTOM_VALUE = 65; //[A-Z]
+    private static final int FIRST_PART_TOP_VALUE = 90; //[A-Z]
+    private static final int SECOND_PART_BOTTOM_VALUE = 97; //[a-z]
+    private static final int SECOND_PART_TOP_VALUE = 122; //[a-z]
+    private static final int THIRD_PART_BOTTOM_VALUE = 48; //[0-1]
+    private static final int THIRD_PART_TOP_VALUE = 57; //[0-1]
+    private static final int FOURTH_PART_BOTTOM_VALUE = 33; //special symbols
+    private static final int FOURTH_PART_TOP_VALUE = 47; //special symbols
     private static final int PART_COUNT = 4;
 
     private static String password = "";
